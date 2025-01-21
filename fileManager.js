@@ -1,7 +1,5 @@
-const { rejects } = require('assert');
-const { error } = require('console');
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
 
 function createDirectory(dirPath) {
     return new Promise((resolve, reject) => {
@@ -90,4 +88,4 @@ function createPath(currentPath, fileName) {
     })
 }
 
-module.exports = {createDirectory, createFile, listFiles, readFiles, writeFile, deleteFile, createPath};
+export default {createDirectory, createFile, listFiles, readFiles, writeFile, deleteFile, createPath};

@@ -1,9 +1,10 @@
-const fileManager = require('./fileManager');
-const readlineSync = require('readline-sync');
-const path = require('path');
-const { copyFileSync } = require('fs');
+import fileManager from './fileManager.js';
+import readlineSync from 'readline-sync';
+import path from 'path';
+import url, { fileURLToPath } from 'url';
 
 async function main () {
+    const __dirname = path.dirname(fileURLToPath(import.meta.url));
     const baseDir = path.join(__dirname, "MyFiles");
 
     fileManager.createDirectory(baseDir);
